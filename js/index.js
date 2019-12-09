@@ -53,31 +53,48 @@ function quizPage () {
     contentDiv.append(questionDisplayDiv)
     contentDiv.append(answersButtonDiv)
     contentDiv.append(nextButton)
-    questionMetaDiv.append(questionCountDiv)
+
+    nextButton.classList.add('next-button')
+
+    questionMetaDiv.classList.add('question-meta')
     questionMetaDiv.append(questionTimeDiv)
+    // questionMetaDiv.append(questionCountDiv)
+    
     questionMetaDiv.append(questionProgressDiv)
 
-    questionTimeDiv.innerHTML = "<p>15</p>"
-    questionCountDiv.innerHTML = "Question: 1 of 10"
+    questionCountDiv.innerHTML = "<p>Question: 1 of 10</p>"
+    questionTimeDiv.innerHTML = "<h3>15</h3>"
+    questionTimeDiv.classList.add('time-container')
+    
+    questionProgressDiv.classList.add('progress-container')
+    questionProgressDiv.append(questionCountDiv)
     questionProgressDiv.append(questionProgress)
+    
+    
     questionProgress.value = '22'
     questionProgress.max = '100'
+    questionProgress.classList.add('progress')
     questionDisplayDiv.append(displayText)
+    questionDisplayDiv.classList.add('display-content')
     displayText.innerText = "What cricketing term denotes a batsman being dismissed with a score of zero?"
 
     answersButtonDiv.append(optionOneButton)
     answersButtonDiv.append(optionTwoButton)
     answersButtonDiv.append(optionThreeButton)
     answersButtonDiv.append(optionFourButton)
+    answersButtonDiv.classList.add('answers-button')
 
+    optionOneButton.innerText = "Beamer"
+    optionTwoButton.innerText = "Duck"
+    optionThreeButton.innerText = "Carry"
+    optionFourButton.innerText = "Bye"
+    
+    optionFourButton.classList.add('answer-button__default')
+    optionThreeButton.classList.add('answer-button__default')
+    optionTwoButton.classList.add('answer-button__default')
+    optionOneButton.classList.add('answer-button__default')
 
-
-
-
-
-   
-
-  
+    nextButton.innerText = "NEXT"
 
 }
 
